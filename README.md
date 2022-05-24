@@ -89,7 +89,7 @@ $ yarn test
 - [x] Buscar total de casos por faixa etária
 - [ ] Buscar dados de óbitos
 - [ ] Buscar dados de testagem
-- [-] Permitir filtrar os dados
+- [ ] Permitir filtrar os dados
 
 <h2 id="tecnologias">🛠 Tecnologias</h2>
 
