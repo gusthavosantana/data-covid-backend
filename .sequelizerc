@@ -1,0 +1,24 @@
+const path = require('path');
+const env = process.env.NODE_ENV || 'development';
+
+const configs = {
+    development: {
+        'config': path.resolve('src', 'infra', 'database', 'config.js'),
+        'models-path': path.resolve('src', 'infra', 'database', 'sequelize.js'),
+        'seeders-path': path.resolve('src', 'infra', 'database', 'seeders'),
+        'migrations-path': path.resolve('src', 'infra', 'database', 'migrations')
+    },
+    test: {
+        'config': path.resolve('src', 'infra', 'database', 'config.js'),
+        'models-path': path.resolve('src', 'infra', 'database', 'sequelize.js'),
+        'seeders-path': path.resolve('src', 'infra', 'database', 'seeders'),
+        'migrations-path': path.resolve('src', 'infra', 'database', 'migrations')
+    },
+    production: {
+        'config': path.resolve('dist', 'infra', 'database', 'config.js'),
+        'models-path': path.resolve('dist', 'infra', 'database', 'sequelize.js'),
+        'seeders-path': path.resolve('dist', 'infra', 'database', 'seeders'),
+        'migrations-path': path.resolve('dist', 'infra', 'database', 'migrations')
+    }    
+}
+module.exports = configs[env];
